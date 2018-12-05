@@ -59,6 +59,7 @@ https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md for
 information.
 """
 
+
 __author__ = 'wan@google.com (Zhanyong Wan)'
 
 import os
@@ -232,7 +233,7 @@ def main():
     # fuse_gmock_files.py GMOCK_ROOT_DIR OUTPUT_DIR
     FuseGMock(sys.argv[1], sys.argv[2])
   else:
-    print __doc__
+    print(__doc__)
     sys.exit(1)
 
 

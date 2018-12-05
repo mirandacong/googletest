@@ -49,12 +49,13 @@
        AC_INIT, including in comments and character strings.
 """
 
+
 import sys
 import re
 
 # Read the command line argument (the output directory for Version.h)
 if (len(sys.argv) < 3):
-  print "Usage: versiongenerate.py input_dir output_dir"
+  print("Usage: versiongenerate.py input_dir output_dir")
   sys.exit(1)
 else:
   input_dir = sys.argv[1]

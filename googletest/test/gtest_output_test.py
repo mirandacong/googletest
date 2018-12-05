@@ -39,6 +39,8 @@ SYNOPSIS
        gtest_output_test.py
 """
 
+from __future__ import print_function, unicode_literals
+
 __author__ = 'wan@google.com (Zhanyong Wan)'
 
 import difflib
@@ -84,7 +86,6 @@ GOLDEN_PATH = os.path.join(gtest_test_utils.GetSourceDir(), GOLDEN_NAME)
 
 def ToUnixLineEnding(s):
   """Changes all Windows/Mac line endings in s to UNIX line endings."""
-
   return s.replace('\r\n', '\n').replace('\r', '\n')
 
 
