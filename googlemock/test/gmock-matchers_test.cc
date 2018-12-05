@@ -1026,7 +1026,10 @@ class Unprintable {
 
   bool operator==(const Unprintable& /* rhs */) const { return true; }
  private:
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunused-private-field"
   char c_;
+#pragma clang diagnostic pop
 };
 
 TEST(EqTest, CanDescribeSelf) {

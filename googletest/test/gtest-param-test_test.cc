@@ -1035,7 +1035,10 @@ class Unstreamable {
   explicit Unstreamable(int value) : value_(value) {}
 
  private:
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunused-private-field"
   int value_;
+#pragma clang diagnostic pop
 };
 
 class CommentTest : public TestWithParam<Unstreamable> {};
