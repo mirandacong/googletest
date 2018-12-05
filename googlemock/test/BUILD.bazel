@@ -51,7 +51,7 @@ cc_test(
             "-pthread",
         ],
     }),
-    deps = ["//:gtest"],
+    deps = [label("../../:gtest_main")],
 )
 
 #  Py tests
@@ -66,9 +66,7 @@ cc_binary(
     name = "gmock_leak_test_",
     testonly = 1,
     srcs = ["gmock_leak_test_.cc"],
-    deps = [
-        "//:gtest_main",
-    ],
+    deps = [label("../../:gtest_main")],
 )
 
 py_test(
@@ -89,17 +87,13 @@ cc_test(
         "gmock_link_test.cc",
         "gmock_link_test.h",
     ],
-    deps = [
-        "//:gtest_main",
-    ],
+    deps = [label("../../:gtest_main")],
 )
 
 cc_binary(
     name = "gmock_output_test_",
     srcs = ["gmock_output_test_.cc"],
-    deps = [
-        "//:gtest",
-    ],
+    deps = [label("../../:gtest_main")],
 )
 
 py_test(
@@ -117,7 +111,5 @@ cc_test(
     name = "gmock_test",
     size = "small",
     srcs = ["gmock_test.cc"],
-    deps = [
-        "//:gtest_main",
-    ],
+    deps = [label("../../:gtest_main")],
 )
